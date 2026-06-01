@@ -74,6 +74,7 @@ nav a:hover {
 
 .hero span {
   background: linear-gradient(90deg, #7c5cff, #4cc9f0);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -139,4 +140,23 @@ footer {
   padding: 25px;
   border-top: 1px solid rgba(255,255,255,0.08);
   color: #666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary, .btn-secondary {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: #7c5cff;
+  transition: 0.3s;
 }

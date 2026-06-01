@@ -31,14 +31,18 @@ nav a {
   color: #bbb;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 90px 20px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 48px;
 }
 
 .hero span {
@@ -111,36 +115,4 @@ footer {
   text-align: center;
   padding: 20px;
   color: #666;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  margin: 5px;
-  border-radius: 10px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
-}
-
-.primary {
-  background: #7c5cff;
-  color: white;
-}
-
-.primary:hover {
-  transform: translateY(-2px);
-}
-
-.secondary {
-  border: 1px solid #444;
-  color: white;
-}
-
-.secondary:hover {
-  border-color: #7c5cff;
 }

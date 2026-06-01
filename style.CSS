@@ -175,3 +175,24 @@ html {
   outline: none;
   backdrop-filter: blur(10px);
 }
+
+.dashboard {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.charts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.chart-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+}

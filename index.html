@@ -9,6 +9,8 @@
 
   <!-- Font (Stripe/modern feel) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -38,10 +40,27 @@
     <p>
       A modern AI-inspired platform built for developers who want clean design, speed, and simplicity.
     </p>
-    
+
     <div class="search-box">
   <input type="text" id="searchInput" placeholder="Search features...">
 </div>
+<section>>class="dashboard">
+
+  <h2>AI Analytics Dashboard</h2>
+
+  <div class="charts">
+
+    <div class="chart-box">
+      <canvas id="usageChart"></canvas>
+    </div>
+
+    <div class="chart-box">
+      <canvas id="performanceChart"></canvas>
+    </div>
+
+  </div>
+
+
   </section>
 
   <!-- FEATURES -->
@@ -72,6 +91,9 @@
     <a href="#features" class="btn-primary">Explore</a>
   </button>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 </body>
 </html>

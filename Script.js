@@ -1,48 +1,64 @@
+function sendMessage() {
+  const input = document.getElementById("userInput");
+  const text = input.value.trim();
+
+  if (!text) return;
+
+  const chat = document.getElementById("chatContainer");
+
+  // USER MESSAGE
+  const userMsg = document.createElement("div");
+  userMsg.className = "msg user";
+  userMsg.innerText = text;
+  chat.appendChild(userMsg);
+
+  // AI MESSAGE (placeholder)
+  const aiMsg = document.createElement("div");
+  aiMsg.className = "msg ai";
+  aiMsg.innerText = "Thinking... 🤖";
+  chat.appendChild(aiMsg);
+
+  // Auto scroll
+  chat.scrollTop = chat.scrollHeight;
+
+  // Simple AI responses (demo logic)
+  setTimeout(() => {
+    let response = "";
+
+    const msg = text.toLowerCase();
+
+    if (msg.includes("hello") || msg.includes("hi")) {
+      response = "Hello 👋 How can I help you with EpiPulseAI?";
+    }
+    else if (msg.includes("what is this")) {
+      response = "This is EpiPulseAI — a ChatGPT-style frontend UI project.";
+    }
+    else if (msg.includes("features")) {
+      response = "It includes AI-style UI, chat interface, and dashboard design.";
+    }
+    else if (msg.includes("help")) {
+      response = "Try asking: features, about, or hello 🙂";
+    }
+    else {
+      response = "I am a demo AI inside EpiPulseAI. You can expand my logic anytime 🚀";
+    }
+
+    aiMsg.innerText = response;
+
+    chat.scrollTop = chat.scrollHeight;
+
+  }, 800);
+
+  input.value = "";
+}
+
+// OPTIONAL: press Enter to send message
 document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("userInput");
 
-  /* ---------------- SEARCH ---------------- */
-  const input = document.getElementById("searchInput");
-  const cards = document.querySelectorAll(".card");
-
-  input.addEventListener("input", function () {
-    const value = input.value.toLowerCase();
-
-    cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-
-      if (text.includes(value)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  });
-
-  /* ---------------- CHART 1 ---------------- */
-  new Chart(document.getElementById("chart1"), {
-    type: "line",
-    data: {
-      labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
-      datasets: [{
-        label: "Usage",
-        data: [12, 18, 10, 25, 22, 30, 28],
-        borderColor: "#7c5cff",
-        tension: 0.4
-      }]
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      sendMessage();
     }
   });
-
-  /* ---------------- CHART 2 ---------------- */
-  new Chart(document.getElementById("chart2"), {
-    type: "bar",
-    data: {
-      labels: ["Speed","AI","UX","Stability"],
-      datasets: [{
-        label: "Score",
-        data: [90, 85, 88, 95],
-        backgroundColor: ["#7c5cff","#4cc9f0","#00d4ff","#9b5cff"]
-      }]
-    }
-  });
-
 });

@@ -3,75 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EpiPulseAI Dashboard</title>
+  <title>EpiPulseAI Chat UI</title>
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <header class="nav">
+  <!-- TOP BAR -->
+  <header class="topbar">
     <div class="logo">EpiPulse<span>AI</span></div>
-
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#about">About</a>
-    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Build Smarter with <span>AI Power</span></h1>
-    <p>A modern AI-inspired platform for developers.</p>
+  <!-- CHAT AREA -->
+  <main class="chat-container" id="chatContainer">
 
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search features...">
+    <div class="msg ai">
+      👋 Hi! I am EpiPulseAI. Ask me anything.
     </div>
-  </section>
 
-  <!-- FEATURES -->
-  <section id="features" class="features">
-    <div class="card">⚡ Instant Performance</div>
-    <div class="card">🤖 AI Inspired UI</div>
-    <div class="card">📱 Fully Responsive</div>
-  </section>
+  </main>
 
-  <!-- DASHBOARD -->
-  <section id="dashboard" class="dashboard">
-    <h2>AI Analytics Dashboard</h2>
-
-    <div class="charts">
-      <div class="chart-box">
-        <canvas id="chart1"></canvas>
-      </div>
-
-      <div class="chart-box">
-        <canvas id="chart2"></canvas>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2>About EpiPulseAI</h2>
-    <p>Frontend SaaS-style AI dashboard project inspired by Stripe & ChatGPT UI.</p>
-  </section>
-
-  <footer>
-    © 2026 EpiPulseAI
+  <!-- INPUT -->
+  <footer class="input-area">
+    <input type="text" id="userInput" placeholder="Message EpiPulseAI...">
+    <button onclick="sendMessage()">Send</button>
   </footer>
 
-  <!-- JS -->
   <script src="script.js"></script>
-
 </body>
 </html>
 

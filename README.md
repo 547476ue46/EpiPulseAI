@@ -1,90 +1,65 @@
-\# 🤖 EpiPulseAI
+# 🤖 EpiPulseAI
+
+A modern AI-inspired interactive web project built using HTML, CSS, and JavaScript.  
+Designed to demonstrate frontend development skills, UI/UX design, and responsive web architecture.
+
+---
+
+## ✨ Features
+- Fully responsive design (mobile + desktop)
+- Modern UI with smooth animations
+- Interactive frontend components
+- Clean and modular code structure
+- AI-inspired futuristic theme
+
+---
+
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+
+---
+
+## 📸 Preview
+(Add screenshot here later)
+
+---
+
+## 📁 Project Structure
 
 
+---
 
-EpiPulseAI is a modern AI-inspired web project built using HTML, CSS, and JavaScript.  
+## 🚀 Live Demo
+👉 https://547476ue46.github.io/EpiPulseAI/
 
-It focuses on clean UI, smooth interactions, and a responsive design experience.
+---
 
+## 💡 Key Learnings
+- DOM manipulation
+- Responsive UI design
+- Component structuring
+- Git & GitHub workflow
+- Deployment using GitHub Pages
 
+---
 
-\---
+## 🔮 Future Improvements
+- AI chatbot integration
+- GSAP animations for premium UI feel
+- Backend integration (Node.js / Flask)
+- User authentication system
 
+---
 
+## 👩‍💻 Developer
+Built by a passionate developer focused on AI + frontend development skills.
 
-\## ✨ Features
-
-\- Responsive UI (mobile + desktop)
-
-\- Modern animations and transitions
-
-\- Clean component-based structure
-
-\- Interactive frontend logic
-
-\- AI-inspired design theme
-
-
-
-\---
-
-
-
-\## 🛠️ Tech Stack
-
-\- HTML5
-
-\- CSS3
-
-\- JavaScript (Vanilla)
-
-
-
-\---
-
-
-
-\## 📁 Project Structure
-
-
-
-
-
-\---
-
-
-
-\## 🚀 How to Run
-
-1\. Download or clone the repo
-
-2\. Open `index.html` in browser
-
-3\. Done ✔
-
-
-
-\---
-
-
-
-\## 🔮 Future Improvements
-
-\- Add backend AI integration
-
-\- Improve animations with GSAP
-
-\- Add authentication system
-
-\- Deploy live version
-
-
-
-\---
-
-
-
-\## 👩‍💻 Author
-
-Built with dedication for learning and portfolio growth.
+## 🧠 Project Highlights
+This project demonstrates real-world frontend development workflow including:
+- Version control using Git
+- Deployment using GitHub Pages
+- UI/UX design principles
+- Code organization practices
 

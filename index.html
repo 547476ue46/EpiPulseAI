@@ -7,10 +7,11 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font (Stripe/modern feel) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Chart.js (for dashboard graphs) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,81 +20,87 @@
   <header class="nav">
     <div class="logo">EpiPulse<span>AI</span></div>
 
-   <nav>
-  <a href="#features">Features</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-    <button class="btn-primary">Get Started</button>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About</a>
+    </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="glow"></div>
-
-    <h1>
-      Build smarter with<br/>
-      <span>AI-powered tools</span>
-    </h1>
-
-    <p>
-      A modern AI-inspired platform built for developers who want clean design, speed, and simplicity.
-    </p>
+    <h1>Build Smarter with <span>AI Power</span></h1>
+    <p>A modern AI-inspired platform for developers and creators.</p>
 
     <div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search features...">
-</div>
-<section>>class="dashboard">
-
-  <h2>AI Analytics Dashboard</h2>
-
-  <div class="charts">
-
-    <div class="chart-box">
-      <canvas id="usageChart"></canvas>
+      <input type="text" placeholder="Search features...">
     </div>
-
-    <div class="chart-box">
-      <canvas id="performanceChart"></canvas>
-    </div>
-
-  </div>
-
-
   </section>
 
   <!-- FEATURES -->
   <section id="features" class="features">
-    <div class="card">⚡ Instant Performance</div>
+    <div class="card">⚡ Fast Performance</div>
     <div class="card">🤖 AI Inspired UI</div>
-    <div class="card">📱 Fully Responsive</div>
+    <div class="card">📱 Responsive Design</div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="dashboard">
+    <h2>AI Analytics Dashboard</h2>
+
+    <div class="charts">
+      <div class="chart-box">
+        <canvas id="chart1"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="chart2"></canvas>
+      </div>
+    </div>
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+  <section id="about" class="about">
     <h2>About EpiPulseAI</h2>
     <p>
-      A frontend project designed to replicate modern SaaS platforms like Stripe & ChatGPT using clean UI principles.
+      A frontend project inspired by modern SaaS platforms like Stripe and ChatGPT.
     </p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Built for internship & portfolio showcase</p>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
-    © 2026 EpiPulseAI — Designed with precision
+    © 2026 EpiPulseAI — Built with precision
   </footer>
-  <button>
-    <a href="#features" class="btn-primary">Explore</a>
-  </button>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- JS -->
+  <script>
+    // Line chart
+    new Chart(document.getElementById("chart1"), {
+      type: "line",
+      data: {
+        labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+        datasets: [{
+          label: "Usage",
+          data: [10, 20, 15, 30, 25, 40, 35],
+          borderColor: "#7c5cff",
+          tension: 0.4
+        }]
+      }
+    });
+
+    // Bar chart
+    new Chart(document.getElementById("chart2"), {
+      type: "bar",
+      data: {
+        labels: ["Speed","UI","Stability","UX"],
+        datasets: [{
+          label: "Score",
+          data: [90, 85, 95, 88],
+          backgroundColor: ["#7c5cff","#4cc9f0","#00d4ff","#9b5cff"]
+        }]
+      }
+    });
+  </script>
 
 </body>
 </html>

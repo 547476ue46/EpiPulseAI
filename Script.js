@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const value = input.value.toLowerCase();
 
     cards.forEach(card => {
-      const text = card.innerText.toLowerCase();
-      card.style.display = text.includes(value) ? "block" : "none";
+      card.style.display =
+        card.innerText.toLowerCase().includes(value)
+          ? "block"
+          : "none";
     });
   });
 
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* ---------------- CHAT ---------------- */
+/* ---------------- CHAT AI ---------------- */
 function sendMessage() {
   const input = document.getElementById("userInput");
   const text = input.value.trim();
@@ -48,22 +50,43 @@ function sendMessage() {
 
   const chat = document.getElementById("chatBox");
 
-  // user msg
+  // USER
   const user = document.createElement("div");
   user.className = "msg user";
   user.innerText = text;
   chat.appendChild(user);
 
-  // ai msg
+  // AI
   const ai = document.createElement("div");
   ai.className = "msg ai";
   ai.innerText = "Thinking... 🤖";
   chat.appendChild(ai);
 
+  let msg = text.toLowerCase();
+  let reply = "";
+
   setTimeout(() => {
-    ai.innerText = "This is a demo AI response from EpiPulseAI 🚀";
+
+    if (msg.includes("hello") || msg.includes("hi")) {
+      reply = "Hello 👋 I am EpiPulseAI!";
+    }
+    else if (msg.includes("features")) {
+      reply = "I have Chat UI, Dashboard graphs and Search system ⚡";
+    }
+    else if (msg.includes("dashboard")) {
+      reply = "Dashboard shows AI usage analytics 📊";
+    }
+    else if (msg.includes("help")) {
+      reply = "Try: hello, features, dashboard 🙂";
+    }
+    else {
+      reply = "I am a demo AI assistant for your project 🚀";
+    }
+
+    ai.innerText = reply;
+    chat.scrollTop = chat.scrollHeight;
+
   }, 700);
 
   input.value = "";
-  chat.scrollTop = chat.scrollHeight;
 }

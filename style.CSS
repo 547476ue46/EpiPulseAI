@@ -7,14 +7,9 @@ body {
 
 /* NAV */
 .nav {
-  padding: 15px 30px;
+  padding: 15px;
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: 700;
+  text-align: center;
 }
 
 .logo span {
@@ -24,7 +19,7 @@ body {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 70px 20px;
+  padding: 60px 20px;
 }
 
 .hero span {
@@ -32,35 +27,33 @@ body {
 }
 
 .search-box input {
-  margin-top: 15px;
   padding: 12px;
   width: 250px;
   border-radius: 10px;
   border: none;
-  outline: none;
 }
 
 /* FEATURES */
 .features {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 40px;
+  gap: 15px;
   flex-wrap: wrap;
+  padding: 40px;
 }
 
 .card {
   background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
-  width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
   text-align: center;
 }
 
 /* DASHBOARD */
 .dashboard {
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .charts {
@@ -72,23 +65,23 @@ body {
 
 /* CHAT */
 .chat-section {
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .chat-box {
   max-width: 600px;
   margin: auto;
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
   height: 250px;
   overflow-y: auto;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .msg {
   padding: 10px;
-  margin: 10px 0;
+  margin: 8px 0;
   border-radius: 10px;
   max-width: 80%;
 }
@@ -100,10 +93,8 @@ body {
 .user {
   background: #7c5cff;
   margin-left: auto;
-  text-align: right;
 }
 
-/* INPUT */
 .input-area {
   display: flex;
   justify-content: center;

@@ -1,39 +1,100 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: #0b0f1a;
   color: white;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
 }
 
-/* TOP BAR */
-.topbar {
-  padding: 15px;
+/* NAV */
+.nav {
+  padding: 15px 30px;
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-  text-align: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .logo span {
   color: #7c5cff;
 }
 
-/* CHAT AREA */
-.chat-container {
-  flex: 1;
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero span {
+  color: #7c5cff;
+}
+
+.search-box input {
+  margin-top: 15px;
+  padding: 12px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
   padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+}
+
+/* DASHBOARD */
+.dashboard {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.charts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CHAT */
+.chat-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.chat-box {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  height: 250px;
   overflow-y: auto;
 }
 
-/* MESSAGES */
 .msg {
-  padding: 12px 16px;
+  padding: 10px;
   margin: 10px 0;
-  border-radius: 12px;
-  max-width: 70%;
-  line-height: 1.4;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.ai {
+  background: rgba(255,255,255,0.1);
 }
 
 .user {
@@ -42,31 +103,33 @@ body {
   text-align: right;
 }
 
-.ai {
-  background: rgba(255,255,255,0.08);
-}
-
 /* INPUT */
 .input-area {
   display: flex;
-  padding: 10px;
-  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .input-area input {
-  flex: 1;
-  padding: 12px;
+  padding: 10px;
+  width: 300px;
   border-radius: 10px;
   border: none;
-  outline: none;
 }
 
 .input-area button {
   margin-left: 10px;
-  padding: 12px 16px;
-  border: none;
-  border-radius: 10px;
+  padding: 10px 15px;
   background: #7c5cff;
+  border: none;
   color: white;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
 }

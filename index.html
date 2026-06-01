@@ -3,34 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EpiPulseAI Chat UI</title>
+  <title>EpiPulseAI</title>
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
-  <header class="topbar">
+  <!-- TOP NAV -->
+  <header class="nav">
     <div class="logo">EpiPulse<span>AI</span></div>
   </header>
 
-  <!-- CHAT AREA -->
-  <main class="chat-container" id="chatContainer">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Chat. Analyze. Build with <span>EpiPulseAI</span></h1>
+    <p>AI-powered UI + Dashboard + Chat Interface in one system</p>
 
-    <div class="msg ai">
-      👋 Hi! I am EpiPulseAI. Ask me anything.
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search features...">
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="features">
+    <div class="card">⚡ Instant Performance</div>
+    <div class="card">🤖 AI Chat Interface</div>
+    <div class="card">📊 Smart Analytics</div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="dashboard">
+    <h2>AI Analytics Dashboard</h2>
+
+    <div class="charts">
+      <canvas id="chart1"></canvas>
+      <canvas id="chart2"></canvas>
+    </div>
+  </section>
+
+  <!-- CHAT SECTION -->
+  <section class="chat-section">
+    <h2>AI Chat Interface</h2>
+
+    <div class="chat-box" id="chatBox">
+      <div class="msg ai">Hello 👋 I am EpiPulseAI. Ask me anything.</div>
     </div>
 
-  </main>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Type message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </section>
 
-  <!-- INPUT -->
-  <footer class="input-area">
-    <input type="text" id="userInput" placeholder="Message EpiPulseAI...">
-    <button onclick="sendMessage()">Send</button>
+  <footer>
+    © 2026 EpiPulseAI
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
 

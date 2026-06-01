@@ -1,64 +1,69 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* ---------------- SEARCH ---------------- */
+  const input = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card");
+
+  input.addEventListener("input", function () {
+    const value = input.value.toLowerCase();
+
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(value) ? "block" : "none";
+    });
+  });
+
+  /* ---------------- GRAPHS ---------------- */
+  new Chart(document.getElementById("chart1"), {
+    type: "line",
+    data: {
+      labels: ["Mon","Tue","Wed","Thu","Fri"],
+      datasets: [{
+        label: "Usage",
+        data: [10,20,15,30,25],
+        borderColor: "#7c5cff"
+      }]
+    }
+  });
+
+  new Chart(document.getElementById("chart2"), {
+    type: "bar",
+    data: {
+      labels: ["Speed","AI","UX"],
+      datasets: [{
+        label: "Score",
+        data: [90,85,88],
+        backgroundColor: ["#7c5cff","#4cc9f0","#00d4ff"]
+      }]
+    }
+  });
+
+});
+
+/* ---------------- CHAT ---------------- */
 function sendMessage() {
   const input = document.getElementById("userInput");
   const text = input.value.trim();
-
   if (!text) return;
 
-  const chat = document.getElementById("chatContainer");
+  const chat = document.getElementById("chatBox");
 
-  // USER MESSAGE
-  const userMsg = document.createElement("div");
-  userMsg.className = "msg user";
-  userMsg.innerText = text;
-  chat.appendChild(userMsg);
+  // user msg
+  const user = document.createElement("div");
+  user.className = "msg user";
+  user.innerText = text;
+  chat.appendChild(user);
 
-  // AI MESSAGE (placeholder)
-  const aiMsg = document.createElement("div");
-  aiMsg.className = "msg ai";
-  aiMsg.innerText = "Thinking... 🤖";
-  chat.appendChild(aiMsg);
+  // ai msg
+  const ai = document.createElement("div");
+  ai.className = "msg ai";
+  ai.innerText = "Thinking... 🤖";
+  chat.appendChild(ai);
 
-  // Auto scroll
-  chat.scrollTop = chat.scrollHeight;
-
-  // Simple AI responses (demo logic)
   setTimeout(() => {
-    let response = "";
-
-    const msg = text.toLowerCase();
-
-    if (msg.includes("hello") || msg.includes("hi")) {
-      response = "Hello 👋 How can I help you with EpiPulseAI?";
-    }
-    else if (msg.includes("what is this")) {
-      response = "This is EpiPulseAI — a ChatGPT-style frontend UI project.";
-    }
-    else if (msg.includes("features")) {
-      response = "It includes AI-style UI, chat interface, and dashboard design.";
-    }
-    else if (msg.includes("help")) {
-      response = "Try asking: features, about, or hello 🙂";
-    }
-    else {
-      response = "I am a demo AI inside EpiPulseAI. You can expand my logic anytime 🚀";
-    }
-
-    aiMsg.innerText = response;
-
-    chat.scrollTop = chat.scrollHeight;
-
-  }, 800);
+    ai.innerText = "This is a demo AI response from EpiPulseAI 🚀";
+  }, 700);
 
   input.value = "";
+  chat.scrollTop = chat.scrollHeight;
 }
-
-// OPTIONAL: press Enter to send message
-document.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("userInput");
-
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      sendMessage();
-    }
-  });
-});

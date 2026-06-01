@@ -38,7 +38,7 @@ st.markdown("""
     background: linear-gradient(90deg,#7c3aed,#06b6d4);
     color: white;
     border-radius: 12px;
-    border: none;
+    border: none;git push
     padding: 10px 20px;
     font-weight: bold;
     transition: 0.3s;

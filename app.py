@@ -17,6 +17,11 @@ except ImportError:
         st.sidebar.title("EpiPulse Controls")
         return None
     
+st.set_page_config(
+    page_title="EpiPulse AI",
+    page_icon="🧠",
+    layout="wide"
+)
 st.markdown("""
 <style>
 
@@ -38,7 +43,7 @@ st.markdown("""
     background: linear-gradient(90deg,#7c3aed,#06b6d4);
     color: white;
     border-radius: 12px;
-    border: none;git push
+    border: none;
     padding: 10px 20px;
     font-weight: bold;
     transition: 0.3s;
@@ -59,11 +64,6 @@ h1,h2,h3 {
 menu = show_sidebar()
 from fpdf import FPDF
 
-st.set_page_config(
-    page_title="EpiPulse AI",
-    page_icon="🧠",
-    layout="wide"
-)
 
 if menu == "🏠 Dashboard":
     st.title("🏠 EpiPulse AI Dashboard")
@@ -110,7 +110,7 @@ st.sidebar.title("EpiPulse Controls")
 tab1, tab2, tab3, tab4 = st.tabs([
     "Overview",
     "Forecasting",
-    "MAps",
+    "Maps",
     "Risk Analysis"
 ])
 
@@ -295,19 +295,19 @@ with tab3:
 # Adding Markers
     folium.Marker(
         [28.6139, 77.2090],
-        popups="Delhi Oubreak Zone",
-        icon=folium.Icon(color='red')
+        popup="Delhi Oubreak Zone",
+        icon=folium.Icon(color="red")
     ).add_to(outbreak_map)
         
     folium.Marker(
         [19.0760, 72.8777],
-        popups="Mumbai Risk Zone",
+        popup="Mumbai Risk Zone",
         icon=folium.Icon(color="red"),
     ).add_to(outbreak_map)
 
     folium.Marker(
         [13.0827, 80.2707],
-        popups="Punjab Alert Zone",
+        popup="Chennai Alert Zone",
         icon=folium.Icon(color="red")
     ).add_to(outbreak_map)
 
